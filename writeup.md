@@ -31,7 +31,7 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings with the current pipeline
 
 
 One potential shortcoming would be what would happen when there were two lines on one side
@@ -41,7 +41,7 @@ Another shortcoming could be what would happen when the car was changing lanes
 
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible improvements to the pipeline
 
 A possible improvement would be to identify line colors
 
