@@ -26,7 +26,7 @@ After that, I created a blank image and drew the lane line segements on the blan
 At last, I put the lane line image and the orginal image together.
 ![Lane Lines](./test_images/solidWhiteRight_Lane_Lines.jpg)
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function. First, I identified the line segments in the left or right line by using the slopes of the line segments (the line segments with small slopes were filtered out). Then I fitted the left and right lines using linear functions. At last, I specify the two endpoints for each line to draw the left and right lines on the blank image
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function. First, I identified the line segments on the left or right line by using the slopes of the line segments (the line segments with small slopes were filtered out). Then I fitted the left and right lines using linear functions. At last, I specify the two endpoints for each line to draw the left and right lines on the blank image
 
 
 
