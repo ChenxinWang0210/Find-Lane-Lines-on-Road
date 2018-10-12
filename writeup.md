@@ -26,11 +26,7 @@ After that, I created a blank image and drew the lane line segements on the blan
 At last, we put the lane line image and the orginal image together.
 ![Lane Lines](./test_images/solidWhiteRight_Lane_Lines.jpg)
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function. First, I identified the line segments in the left or right line by using the slopes of the line segments (the line segments with small slopes were filtered out). Then I fitted the left and right lines using linear functions. At last, I specify the two endpoints for each line to draw the left and right lines on the blank image
 
 
 
@@ -38,13 +34,15 @@ If you'd like to include images to show how the pipeline works, here is how to i
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+One potential shortcoming would be what would happen when there were two lines on one side
 
-Another shortcoming could be ...
+Another shortcoming could be what would happen when the car was changing lanes
+
+
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be to identify line colors
 
-Another potential improvement could be to ...
+Another potential improvement could be to identify whether the line is segmented or not
