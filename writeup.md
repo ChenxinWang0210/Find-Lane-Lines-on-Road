@@ -22,7 +22,7 @@ Next, I applied a mask to isolate the lane line segments.
 ![Masked edges](./test_images/solidWhiteRight_masked_edges.jpg)
 
 After that, I created a blank image and drew the lane line segements on the blank image. 
-![Line images](./test_images/solidWhiteRight_line_images.jpg)
+![Line images](./test_images/solidWhiteRight_line_image.jpg)
 At last, we put the lane line image and the orginal image together.
 ![Lane Lines](./test_images/solidWhiteRight_Lane_Lines.jpg)
 
