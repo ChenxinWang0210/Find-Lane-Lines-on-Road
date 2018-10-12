@@ -11,20 +11,25 @@
 
 ### 1. Construct the pipeline.
 
-My pipeline consisted of 5 steps. First, I made a copy of the image and converted the copy to grayscale,
-![Original image](./test_images/solidWhiteRight.jpg)
-![Grayscale](./test_images/solidWhiteRight_grayscale.jpg)
+My pipeline consisted of 6 steps. 
 
-then I applied Gaussian smoothing to suppress noise and spurious gradients and used a canny function to detect edges.
-![Canny edges](./test_images/solidWhiteRight_edges.jpg)
+1. I made a copy of the image and applied a color mask to isolate white and yellow object  
+![Original image](./test_images/solidYellowLeft.jpg)
+![Original image](./test_images/solidYellowLeft_color_masked.jpg)
+2. I converted the image to grayscale,
+![Grayscale](./test_images/solidYellowLeft_grayscale.jpg)
 
-Next, I applied a mask to isolate the lane line segments. 
-![Masked edges](./test_images/solidWhiteRight_masked_edges.jpg)
+3. I applied Gaussian smoothing to suppress noise and spurious gradients and used a canny function to detect edges.
+![Canny edges](./test_images/solidYellowLeft_edges.jpg)
 
-After that, I created a blank image and drew the lane line segements on the blank image. 
-![Line images](./test_images/solidWhiteRight_line_image.jpg)
-At last, I put the lane line image and the orginal image together.
-![Lane Lines](./test_images/solidWhiteRight_Lane_Lines.jpg)
+4. I applied a mask to isolate the lane line segments. 
+![Masked edges](./test_images/solidYellowLeft_masked_edges.jpg)
+
+5. I created a blank image and drew the lane line segements on the blank image. 
+![Line images](./test_images/solidYellowLeft_line_image.jpg)
+
+6. I put the lane line image and the orginal image together.
+![Lane Lines](./test_images/solidYellowLeft_Lane_Lines.jpg)
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function. First, I identified the line segments on the left or right line by using the slopes of the line segments (the line segments with small slopes were filtered out). Then I fitted the left and right lines using linear functions. At last, I specify the two endpoints for each line to draw the left and right lines on the blank image
 
